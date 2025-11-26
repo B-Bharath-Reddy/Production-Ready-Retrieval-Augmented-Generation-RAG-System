@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-groq
+langchain-huggingface
+langchain-weaviate
+weaviate-client
+sentence-transformers
+python-dotenv
+pypdf
+docx2txt
