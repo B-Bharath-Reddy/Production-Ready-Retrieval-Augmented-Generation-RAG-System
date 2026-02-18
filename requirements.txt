@@ -1,0 +1,14 @@
+
+langchain
+langchain-groq
+langchain-weaviate
+weaviate-client
+pypdf
+sentence-transformers
+pyyaml
+pydantic
+rank_bm25
+python-dotenv
+tiktoken
+tqdm
+pandas

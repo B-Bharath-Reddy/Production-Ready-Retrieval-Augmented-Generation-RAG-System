@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Configuration (Secrets)
+conf/config.yaml
+
+# Environmental variables
+.env
+
+# Editor directories
+.idea/
+.vscode/
+
+# Data files
+*.pdf

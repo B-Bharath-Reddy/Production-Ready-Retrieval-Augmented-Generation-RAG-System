@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What are the five core functions of the NIST Cybersecurity Framework?",
+        "ground_truth": "The five core functions are Identify, Protect, Detect, Respond, and Recover."
+    },
+    {
+        "question": "What is GitLab's policy on 'all-remote' work?",
+        "ground_truth": "GitLab is an all-remote company, meaning there are no offices and team members can live and work from anywhere, provided there is a reliable internet connection."
+    },
+    {
+        "question": "How does NIST define 'Tier 1' in implementation tiers?",
+        "ground_truth": "Tier 1 is 'Partial'. It indicates that organizational cybersecurity risk management practices are not formalized, and risk is managed in an ad hoc and sometimes reactive manner."
+    },
+    {
+        "question": "What is the role of a 'Directly Responsible Individual' (DRI) at GitLab?",
+        "ground_truth": "A DRI is a single individual who is responsible for a given project or decision. They are empowered to make decisions and are accountable for the results."
+    },
+    {
+        "question": "According to NIST, what is the 'Detect' function?",
+        "ground_truth": "The Detect function includes appropriate activities to identify the occurrence of a cybersecurity event. It enables the timely discovery of cybersecurity events."
+    },
+    {
+        "question": "Does GitLab reimburse for coworking spaces?",
+        "ground_truth": "Yes, GitLab reimburses for coworking spaces or external offices for team members who prefer to work out of an office."
+    },
+    {
+        "question": "What is the 'Protect' function in the NIST framework?",
+        "ground_truth": "The Protect function outlines appropriate safeguards to ensure delivery of critical infrastructure services. It supports the ability to limit or contain the impact of a potential cybersecurity event."
+    },
+    {
+        "question": "What are GitLab's core values?",
+        "ground_truth": "GitLab's core values are Collaboration, Results, Efficiency, Diversity, Inclusion & Belonging, Iteration, and Transparency (CREDIT)."
+    },
+    {
+        "question": "What is the purpose of the NIST AI Risk Management Framework?",
+        "ground_truth": "The AI RMF is designed to equip organizations and individuals with approaches that increase the trustworthiness of AI systems, and to help foster the responsible design, development, deployment, and use of AI systems."
+    },
+    {
+        "question": "What is the 'Handbook First' policy at GitLab?",
+        "ground_truth": "Handbook First means that any change to a process or policy must be documented in the handbook first before it is communicated or implemented. The handbook is the single source of truth."
+    }
+]

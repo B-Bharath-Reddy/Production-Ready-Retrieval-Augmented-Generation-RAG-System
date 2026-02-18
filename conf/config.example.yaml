@@ -1,0 +1,47 @@
+
+# -------------------------------------------------------------------
+# Configuration for Enterprise RAG Knowledge Assistant
+# -------------------------------------------------------------------
+
+# API Keys
+# -------------------------------------------------------------------
+# GROQ_API_KEY: Provided by user
+groq_api_key: "YOUR_GROQ_API_KEY_HERE"
+
+# Weaviate Configuration
+# -------------------------------------------------------------------
+# If using Weaviate Cloud (WCS):
+#   url: "https://your-cluster-url.weaviate.network"
+#   api_key: "your-api-key"
+# If using Local Docker:
+#   url: "http://localhost:8080"
+#   api_key: ""
+weaviate:
+  url: "YOUR_WEAVIATE_URL_HERE"
+  api_key: "YOUR_WEAVIATE_API_KEY_HERE"
+  class_name: "KnowledgeChunk"  # Name of the collection/class in Weaviate
+
+# RAG Pipeline Settings
+# -------------------------------------------------------------------
+chunking:
+  chunk_size: 500       # Characters per chunk
+  chunk_overlap: 50     # Overlap to preserve context
+  method: "semantic"    # "semantic" or "recursive"
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2" # Fast local embeddings
+  device: "cpu"         # "cuda" context if available, else "cpu"
+
+retrieval:
+  top_k: 20             # Number of chunks to retrieve initially
+  hybrid_alpha: 0.5     # Balance between Keyword (0.0) and Vector (1.0) search
+
+reranking:
+  enabled: true
+  model_name: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  top_n: 5              # Number of chunks to send to LLM after reranking
+
+generation:
+  model_name: "llama-3.3-70b-versatile" # Groq-supported model
+  temperature: 0.1      # Low temperature for factual answers
+  max_tokens: 1024
