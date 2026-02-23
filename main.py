@@ -1,4 +1,3 @@
-
 """
 Main Application Entry Point (CLI)
 ----------------------------------
@@ -7,12 +6,33 @@ Runs the Chat Interface for the RAG system.
 Integrates all modules (Rewriter, Retriever, Reranker, Generator) into a loop.
 """
 
+# PRODUCTION-READY: Standard logging setup
+import logging
 import sys
+import os
+
+# PRODUCTION-READY: Load .env file FIRST before setting LangSmith variables
+from dotenv import load_dotenv
+env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'conf', '.env')
+load_dotenv(env_path)
+
+# PRODUCTION-READY: LangSmith tracing environment variables (set AFTER loading .env)
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_API_KEY"] = os.environ.get("LANGCHAIN_API_KEY", "YOUR_LANGCHAIN_API_KEY_HERE")
+os.environ["LANGCHAIN_PROJECT"] = os.environ.get("LANGCHAIN_PROJECT", "rag-project")
+
 from conf.config import cfg
 from retrieval.query_rewriter import QueryRewriter
 from retrieval.retriever import Retriever
 from retrieval.reranker import Reranker
 from generation.generator import Generator
+
+# PRODUCTION-READY: Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 def main():
     """
@@ -22,8 +42,8 @@ def main():
     Commands:
       - Type 'exit' or 'quit' to stop.
     """
-    print("--- Enterprise RAG Assistant ---")
-    print("Initializing components...")
+    logger.info("--- Enterprise RAG Assistant ---")
+    logger.info("Initializing components...")
     
     # Initialize components
     # 1. Rewriter: Optimizes queries
@@ -35,14 +55,14 @@ def main():
     # 4. Generator: Produces answers
     generator = Generator()
     
-    print("Ready! Type 'exit' to quit.\n")
+    logger.info("Ready! Type 'exit' to quit.\n")
     
     while True:
         user_input = input("You: ")
         if user_input.lower() in ["exit", "quit"]:
             break
             
-        print("Assistant: Thinking...", end="\r")
+        logger.info("Assistant: Thinking...")
         
         try:
             # Step 1: Rewrite Query
@@ -61,14 +81,14 @@ def main():
             context_text = "\n\n".join([d.page_content for d in docs])
             answer = generator.generate_answer(user_input, context_text)
             
-            print(f"Assistant: {answer}\n")
+            logger.info(f"Assistant: {answer}\n")
             
             # Optional: Print citations/sources if needed
             # sourcelist = [d.metadata.get('filename') for d in docs]
-            # print(f"[Sources: {', '.join(sourcelist)}]\n")
+            # logger.info(f"[Sources: {', '.join(sourcelist)}]\n")
             
         except Exception as e:
-            print(f"Error: {e}\n")
+            logger.error(f"Error: {e}\n")
 
 if __name__ == "__main__":
     main()

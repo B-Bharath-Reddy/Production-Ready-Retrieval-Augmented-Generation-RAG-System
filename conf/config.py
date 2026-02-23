@@ -11,6 +11,11 @@ import yaml
 from typing import Optional
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
+# PRODUCTION-READY: Load environment variables from .env file
+from dotenv import load_dotenv
+# Load .env from conf/ directory
+env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
+load_dotenv(env_path)
 
 # --- Pydantic Models for Validation ---
 

@@ -117,10 +117,50 @@ python run_eval.py
 ## Prerequisites
 
 1.  **Python 3.10+**
-2.  **Groq API Key** (Set in `conf/config.yaml` or env var)
-3.  **Weaviate Instance** (URL/Key in `conf/config.yaml`)
+2.  **Groq API Key** (Get yours at https://console.groq.com/)
+3.  **Weaviate Instance** (Weaviate Cloud or local Docker)
+4.  **LangSmith API Key** (Optional, for tracing at https://smith.langchain.com/)
 
 **Installation:**
 ```bash
 pip install -r requirements.txt
 ```
+
+---
+
+## Configuration Setup
+
+# PRODUCTION-READY: Secure configuration setup instructions
+Before running the application, you need to set up your configuration files with your actual API keys and URLs.
+
+### Step 1: Copy the Example Files
+
+```bash
+# Copy the YAML configuration example
+cp conf/config.yaml.example conf/config.yaml
+
+# Copy the environment variables example
+cp conf/.env.example conf/.env
+```
+
+### Step 2: Fill in Your Credentials
+
+**Option A: Using `conf/config.yaml`**
+
+Edit `conf/config.yaml` and replace the placeholders:
+- `YOUR_GROQ_API_KEY_HERE` → Your Groq API key
+- `YOUR_WEAVIATE_URL_HERE` → Your Weaviate cluster URL
+- `YOUR_WEAVIATE_API_KEY_HERE` → Your Weaviate API key
+
+**Option B: Using `conf/.env` (Recommended)**
+
+Edit `conf/.env` and set your environment variables:
+```env
+GROQ_API_KEY=your_actual_groq_api_key
+WEAVIATE_URL=https://your-cluster.weaviate.network
+WEAVIATE_API_KEY=your_actual_weaviate_api_key
+LANGCHAIN_API_KEY=your_langchain_api_key  # Optional, for LangSmith tracing
+LANGCHAIN_PROJECT=rag-project              # Optional, customize project name
+```
+
+The application will automatically load these environment variables thanks to the `python-dotenv` integration.
