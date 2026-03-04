@@ -12,6 +12,7 @@ from langchain_core.documents import Document
 from database.vector_store import WeaviateManager
 from embedding.embedder import Embedder
 from conf.config import cfg
+import weaviate.classes as wvc
 
 class Retriever:
     """
@@ -62,16 +63,37 @@ class Retriever:
         print(f"Retrieving top {top_k} docs for query: '{query}' (Hybrid Alpha: {alpha})")
         
         try:
-            # Configure retriever interface
-            # Currently using 'similarity' (Vector) search as the default LangChain wrapper implementation.
-            # TODO: Upgrade to `.as_retriever(search_type="hybrid")` when LangChain Weaviate wrapper stabilizes that feature.
-            retriever = self.vectorstore.as_retriever(
-               search_type="similarity",
-               search_kwargs={"k": top_k}
+            # PRODUCTION-READY: Use Weaviate v4 native hybrid search API
+            # LangChain's as_retriever() doesn't support hybrid search type
+            collection = self.vector_db_manager.client.collections.get(self.vector_db_manager.index_name)
+            
+            # PRODUCTION-READY: Generate query vector manually since collection has no vectorizer
+            query_vector = self.embedder.get_embeddings().embed_query(query)
+            
+            # Execute hybrid search using Weaviate's native API
+            # alpha=0.5 balances BM25 (keyword) and vector (semantic) search
+            # We provide the vector manually because the collection was created without a vectorizer
+            response = collection.query.hybrid(
+                query=query,
+                vector=query_vector,
+                alpha=alpha,
+                limit=top_k,
+                return_metadata=wvc.query.MetadataQuery(score=True)
             )
             
-            # Execute search
-            docs = retriever.invoke(query)
+            # Convert Weaviate results to LangChain Document objects
+            docs = []
+            for obj in response.objects:
+                doc = Document(
+                    page_content=obj.properties.get("text", ""),
+                    metadata={
+                        "source": obj.properties.get("source", ""),
+                        "type": obj.properties.get("type", ""),
+                        "score": obj.metadata.score if obj.metadata else None
+                    }
+                )
+                docs.append(doc)
+            
             return docs
 
         except Exception as e:
