@@ -1,14 +1,14 @@
 question,answer,context_size,faithfulness,relevancy
 What are the five core functions of the NIST Cybersecurity Framework?,"**NIST Cybersecurity Framework Core Functions**
 
-The five core functions of the NIST Cybersecurity Framework (CSF) are:
+The five core functions of the NIST Cybersecurity Framework are:
 * **IDENTIFY**: Understanding the organization's assets, suppliers, and related cybersecurity risks.
 * **PROTECT**: Implementing measures to prevent or deter cyber attacks.
 * **DETECT**: Implementing measures to detect cyber attacks in real-time.
 * **RESPOND**: Implementing measures to respond to detected cyber attacks.
 * **RECOVER**: Implementing measures to restore systems and data after a cyber attack.
 
-[Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, Fig. 2. CSF Functions]",2241,1.0,1.0
+[Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, Fig. 2. CSF Functions]",2208,0.9,1.0
 What is GitLab's policy on 'all-remote' work?,"## GitLab's All-Remote Policy
 
 GitLab is committed to an 'all-remote' work environment. The company believes in operating by documenting processes, guides, solutions, how-tos, and policies, and empowering remote workers to adopt remote-first communication and workflow practices [Source: /handbook/company/culture/all-remote/].
@@ -26,73 +26,71 @@ How does NIST define 'Tier 1' in implementation tiers?,"**NIST Tier 1 Definition
 
 According to the NIST Cybersecurity Framework (CSF) 2.0, Tier 1 is defined as ""Partial"" [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, Appendix B]. 
 
-This tier represents an organization's informal, ad hoc responses to cybersecurity risks, indicating a limited awareness and management of cybersecurity risks [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 8]. 
+This tier represents an informal, ad hoc approach to managing cybersecurity risks, where an organization's cybersecurity risk management practices are not well-established or consistent [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 24]. 
 
 Key characteristics of Tier 1 include:
-* Limited cybersecurity risk management practices
 * Informal, ad hoc responses to cybersecurity risks
-* Limited awareness and management of cybersecurity risks
+* Limited awareness and understanding of cybersecurity risks
+* Inconsistent cybersecurity risk management practices
 
-Organizations at this tier are encouraged to progress to higher tiers as risks or mandates increase, or when a cost-benefit analysis indicates a feasible and cost-effective reduction of negative cybersecurity risks [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 8].",2335,0.9,1.0
-What is the role of a 'Directly Responsible Individual' (DRI) at GitLab?,"## Role of a Directly Responsible Individual (DRI) at GitLab
+Organizations at Tier 1 are encouraged to progress to higher tiers as risks or mandates increase, or when a cost-benefit analysis indicates a feasible and cost-effective reduction of negative cybersecurity risks [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 27].",2335,0.9,1.0
+What is the role of a 'Directly Responsible Individual' (DRI) at GitLab?,"### Role of a Directly Responsible Individual (DRI) at GitLab
 A Directly Responsible Individual (DRI) at GitLab owns particular projects, initiatives, or activities [Source: Directly Responsible Individuals (DRI) description]. 
 
 Key points about the role of a DRI:
 * The DRI would sit in the 'A' (Accountable) role in the RACI model [Source: Context section on RACI and DRI].
-* DRIs are responsible for ensuring compliance with GitLab's policies, and local and federal rules and laws, although this is also an individual responsibility of each team member [Source: Growth RADCIE and DRIs section].
-* The core team will provide guidelines to DRIs so they are clear on what is required in all situations [Source: Directly Responsible Individuals (DRI) description].",1323,0.9,1.0
+* The core team will review and add guidelines so that all related DRIs are clear on what is required in all situations [Source: Context section on Directly Responsible Individuals (DRI)].
+* DRIs are part of GitLab's DACI approach, which includes being Accountable, Consulted, Informed, or having Decision-making authority [Source: Context section on Growth RADCIE and DRIs].",1323,0.9,1.0
 "According to NIST, what is the 'Detect' function?","**Detect Function**
-According to NIST, the 'Detect' function enables the timely discovery and analysis of anomalies, indicators of compromise, and other potentially adverse events that may indicate that cybersecurity attacks and incidents are occurring [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 5]. 
+According to NIST CSF 2.0, the 'Detect' function enables the timely discovery and analysis of anomalies, indicators of compromise, and other potentially adverse events that may indicate that cybersecurity attacks and incidents are occurring [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 5]. 
 
-This function supports successful incident response and recovery activities. Key aspects of the Detect function include:
-* Timely discovery of anomalies and indicators of compromise
-* Analysis of potentially adverse events
-* Support for incident response and recovery activities 
+This function supports successful incident response and recovery activities by allowing for the identification of potential security incidents in a timely manner.",2223,1.0,1.0
+Does GitLab reimburse for coworking spaces?,"**Reimbursement for Coworking Spaces**
 
-Note that specific actions taken to achieve the Detect function outcomes will vary by organization [Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, page 3].",2259,1.0,1.0
-Does GitLab reimburse for coworking spaces?,"I don't have enough information in the provided documents to answer that. 
+Yes, GitLab reimburses team members for costs associated with coworking spaces or external offices. [Source: /handbook/finance/spending-company-money/] 
 
-The provided context only mentions reimbursement for ground transport to a safe location and growth experiences through the Growth and Development (G&D) Fund, but it does not mention coworking spaces. [Source: Team Member Assistance, Growth and Development (G&D) Fund]",1471,1.0,0.8
-What is the 'Protect' function in the NIST framework?,"## NIST Cybersecurity Framework (CSF) 2.0: Protect Function
+Team members are advised to check with their manager to confirm if external office space is reimbursable, especially if they are new to a remote role.",1625,0.9,1.0
+What is the 'Protect' function in the NIST framework?,"## NIST Cybersecurity Framework (CSF) 2.0 - Protect Function
 
-The 'Protect' function in the NIST Cybersecurity Framework (CSF) 2.0 is one of the five core functions that enable organizations to manage cybersecurity risks. 
+The 'Protect' function in the NIST Cybersecurity Framework (CSF) 2.0 is one of the five core functions, which include Identify, Protect, Detect, Respond, and Recover. 
 
 ### Key Aspects of the Protect Function:
 
 * The Protect function involves implementing measures to prevent or deter cyber attacks.
-* It includes actions taken to protect the organization's assets, such as data, hardware, software, systems, facilities, services, and people.
-* The Protect function is part of a continuous process that should be addressed concurrently with the other functions: Identify, Detect, Respond, and Recover.
+* It focuses on protecting the organization's assets, such as data, hardware, software, systems, facilities, services, and people.
+* This function includes implementing security controls and protocols to prevent unauthorized access, use, disclosure, disruption, modification, or destruction of the organization's assets.
 
 ### Source:
-[Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024, Fig. 2. CSF Functions]
+[Source: NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 26, 2024]
 
-Note: The provided context does not offer a detailed explanation of the Protect function. For a comprehensive understanding, it is recommended to consult the official NIST CSF 2.0 documentation.",2221,0.8,1.0
+Note: The provided context does not give a detailed explanation of the Protect function. For a comprehensive understanding, it is recommended to refer to the official NIST CSF 2.0 documentation.",2221,0.8,1.0
 What are GitLab's core values?,"## GitLab Core Values
+GitLab's six core values are:
+* **Collaboration**
+* **Results**
+* **Efficiency**
+* **Diversity, Inclusion & Belonging**
+* **Iteration**
+* **Transparency**
 
-According to the provided context, one of GitLab's core values is [iteration](/handbook/values/#iteration) [Source: security-policy.md is not available, but the information is found in the provided context]. 
-
-Additionally, other values mentioned include:
-* [Credit](/handbook/values/#credit)
-* [Public by default](/handbook/values/#public-by-default)
-
-For a complete list of GitLab's core values, it is recommended to refer to the [handbook/values](/handbook/values/) page, as the provided context only mentions a few of them.",1684,1.0,1.0
+These values together spell the word **CREDIT**, which represents the trust and assumption of good intent that team members give each other [Source: Remote first company values].",1725,1.0,1.0
 What is the purpose of the NIST AI Risk Management Framework?,"**Purpose of the NIST AI Risk Management Framework**
 
-The purpose of the NIST AI Risk Management Framework (AI RMF) is to help address the risks associated with Artificial Intelligence (AI) systems, such as threats to civil liberties and rights, while also providing opportunities to maximize positive impacts [Source: NIST AI 100-1 AI RMF 1.0, Page 3].
+The purpose of the NIST AI Risk Management Framework (AI RMF) is to help address the risks associated with Artificial Intelligence (AI) systems, such as threats to civil liberties and rights, while also providing opportunities to maximize positive impacts [Source: NIST AI 100-1 AI RMF 1.0, Page 3]. The framework offers a path to minimize potential negative impacts of AI systems and provides a structured approach to managing AI risks.
 
-The AI RMF offers a path to:
-* Minimize potential negative impacts of AI systems
-* Manage AI risks and potential negative consequences
-* Allocate risk management resources based on assessed and prioritized risks
+**Key Objectives:**
 
-By using the AI RMF, framework users will have an enhanced capacity to manage the risks of deployed AI systems and to apply the MANAGE function to deployed AI systems as methods, contexts, risks, and needs or expectations from relevant AI actors evolve over time [Source: NIST AI 100-1 AI RMF 1.0, Page 31].",1847,1.0,1.0
-What is the 'Handbook First' policy at GitLab?,"### Handbook First Policy
+* To provide a framework for managing AI risks alongside other enterprise risks (e.g., financial, cybersecurity, reputational, and privacy) [Source: NIST AI 100-1 AI RMF 1.0, Page 1]
+* To help organizations allocate risk management resources based on assessed and prioritized risks [Source: NIST AI 100-1 AI RMF 1.0, Page 31]
+* To enable framework users to continue to apply the MANAGE function to deployed AI systems as methods, contexts, risks, and needs or expectations from relevant AI actors evolve over time [Source: NIST AI 100-1 AI RMF 1.0, Page 31]",1847,0.9,1.0
+What is the 'Handbook First' policy at GitLab?,"## Handbook First Policy at GitLab
+The 'Handbook First' policy at GitLab refers to the approach of documenting information and processes in the company handbook before communicating them to the team or public. 
 
-The 'Handbook First' policy at GitLab refers to the practice of writing things down first, before communicating them to others. This means that documentation is generated before a change is announced or implemented. 
+### Key Points of the Handbook First Policy:
+* Documenting solutions and processes in the handbook before announcing them via other channels such as Slack or email [Source: Terminology (documentation, handbook-first, single source of truth)].
+* Ensuring the handbook is always up to date and serves as a single source of truth for company information [Source: Terminology (documentation, handbook-first, single source of truth)].
+* Making the handbook publicly accessible to promote transparency [Source: Terminology (documentation, handbook-first, single source of truth)].
+* Using the handbook as a powerful resource to increase team efficiency [Source: Terminology (documentation, handbook-first, single source of truth)].
 
-As stated in the context, ""we write things down *first*, and communicate that"" [Source: Terminology section]. This approach ensures that there is a single source of truth and reduces the need for additional documentation after the communication.
-
-Key aspects of the 'Handbook First' policy include:
-* Writing down information before communicating it to others
-* Documenting solutions or changes before announcing them via Slack, email, or other channels
-* Maintaining a publicly accessible handbook that serves as a single source of truth [Source: /handbook/values/#single-source-of-truth]",1869,0.9,1.0
+### Purpose of the Handbook First Policy:
+The purpose of this policy is to create a single source of truth for company information, reduce the need for redundant documentation, and promote transparency and efficiency within the organization. [Source: Terminology (documentation, handbook-first, single source of truth)]",1817,0.9,1.0

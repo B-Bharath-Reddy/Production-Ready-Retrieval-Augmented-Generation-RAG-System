@@ -83,9 +83,10 @@ def main():
             
             logger.info(f"Assistant: {answer}\n")
             
-            # Optional: Print citations/sources if needed
-            # sourcelist = [d.metadata.get('filename') for d in docs]
-            # logger.info(f"[Sources: {', '.join(sourcelist)}]\n")
+            # PRODUCTION-READY: Display source citations for transparency
+            sourcelist = list(set([d.metadata.get('source', d.metadata.get('filename', 'Unknown')) for d in docs]))
+            if sourcelist:
+                logger.info(f"Sources: {', '.join(sourcelist)}\n")
             
         except Exception as e:
             logger.error(f"Error: {e}\n")
